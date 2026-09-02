@@ -1,5 +1,5 @@
 # Javascript-for-Web3
-Javascript (JS) "minimum effective dose" fundamentals review for further use in Web3 development, specially within the Ethereum Virtual Machine (EVM) using Solidity as a programming language and libraries such as Viem for integrations.
+Javascript (JS) "minimum effective dose" fundamentals review for further use in Web3 development, specially for product management purposes within the Ethereum Virtual Machine (EVM), and potentially as a precursor/reference for using Solidity as a programming language and libraries such as Viem for integrations.
 
 Background: I started learning computer science principles with Python back on 2019, which allowed me to build basic tools such as https://github.com/And24Esp/Cashier-Shopping-Cart-Back-End, which then allowed me to work as a Low-Code Developer between 2020 and 2022. After that, and until very recently, I've worked in non-technical roles (all these on Web2 platforms).
 
