@@ -3,7 +3,7 @@ Javascript (JS) "minimum effective dose" fundamentals review for further use in 
 
 Background: I started learning computer science principles with Python back on 2019, which allowed me to build basic tools such as https://github.com/And24Esp/Cashier-Shopping-Cart-Back-End, which then allowed me to work as a Low-Code Developer between 2020 and 2022. After that, and until very recently, I've worked in non-technical roles (all these on Web2 platforms).
 
-As a reference, I'm using the structure detailed on https://www.alchemy.com/university/courses/js, which is a pre-requisite course for https://www.alchemy.com/university/courses/ethereum. So, to make it very clear, my objective is not to become a JS Developer, but to refresh some computer science principles in order to be prepared for the latter course. 
+As a reference, I'm using the structure detailed on https://www.alchemy.com/university/courses/js, which is a pre-requisite course for https://www.alchemy.com/university/courses/ethereum. To make it clear, my objective is not to become a JS Developer, but to refresh some computer science principles in order to be better prepared for the latter Ethereum course. 
 
 "Curriculum" is divided into 3 main sections:
 
