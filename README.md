@@ -1,11 +1,11 @@
 # Javascript-for-Web3
 Javascript (JS) "minimum effective dose" fundamentals review for further use in Web3 development, specially for product management purposes within the Ethereum Virtual Machine (EVM), and potentially as a precursor/reference for using Solidity as a programming language and libraries such as Viem for integrations.
 
-Background: I started learning computer science principles with Python back on 2019, which allowed me to build basic tools such as https://github.com/And24Esp/Cashier-Shopping-Cart-Back-End, which then allowed me to work as a Low-Code Developer between 2020 and 2022. After that, and until very recently, I've worked in non-technical roles (all these on Web2 platforms).
+Background: I learnt computer science principles with Python back on 2019, which allowed me to build basic tools such as https://github.com/And24Esp/Cashier-Shopping-Cart-Back-End, which then allowed me to work as a Low-Code Developer between 2020 and 2022. Since then, I have only been working in non-technical IT roles, such as BA, PM and PdM, all these for Web2 platforms.
 
-As a reference, I'm using the structure detailed on https://www.alchemy.com/university/courses/js, which is a pre-requisite course for https://www.alchemy.com/university/courses/ethereum. To make it clear, my objective is not to become a JS Developer, but to refresh some computer science principles in order to be better prepared for the latter Ethereum course. 
+As a reference, I'm using the learning structure detailed on https://www.alchemy.com/university/courses/js, which is a pre-requisite course for https://www.alchemy.com/university/courses/ethereum. To make it clear, my objective is not to become a JS Developer, but to refresh some computer science principles in order to be better prepared for the latter Ethereum course. 
 
-"Curriculum" is divided into 3 main sections:
+The "curriculum" is divided into 3 main sections:
 
 1. JS Fundamentals:
   Sintaxis/Expressions (data types, operators, variables, functions/statements, conditionals, loops)
