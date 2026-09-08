@@ -8,11 +8,11 @@ As a reference, I'm using the structure detailed on https://www.alchemy.com/univ
 "Curriculum" is divided into 3 main sections:
 
 1. JS Fundamentals:
-  Sintaxis (expressions, statements, variables, functions, operators, conditionals, loops)
+  Sintaxis/Expressions (data types, operators, variables, functions/statements, conditionals, loops)
   Basic data storage (strings, arrays, objects/classes)
-  Other basic features (exceptions, type conversion, destructuring, spread and rest)
+  Other basic/relevant features (exceptions, type conversion, destructuring, spread and rest)
   Prototypes (keywords, prototype chains)
-  Binary and hexadecimal data (particulary relevant to cryptography)
+  Binary and hexadecimal data (particulary relevant in cryptography)
 
 2. Data Structures:
   Array manipulation (sort, map, filter, reduce)
