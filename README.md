@@ -10,7 +10,7 @@ The "curriculum" is divided into 3 main sections:
 1. JS Fundamentals:
   Sintaxis/Expressions (data types, operators, variables, functions/statements, conditionals, loops)
   Basic data storage (strings, arrays, objects/classes)
-  Other basic/relevant features (exceptions, type conversion, destructuring, spread and rest)
+  Other basic features/concepts (exceptions, type conversion, transpiling/compiling)
   Prototypes (keywords, prototype chains)
   Binary and hexadecimal data (particulary relevant in cryptography)
 
