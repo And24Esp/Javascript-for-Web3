@@ -474,6 +474,6 @@ print(Puppy.__mro__)        # (<class 'Puppy'>, <class 'Dog'>, <class 'object'>)
 
 > **JS** treats methods as detachable functions where `this` is decided *at call time* — leading to the classic "lost context" bug in callbacks, which `bind`/arrow functions exist to solve. Underneath, this is all built on a **prototype chain**: `class` is sugar over the same object-linking mechanism JS has always had.
 >
-> **Python** treats methods as descriptors that *auto-bind* `self` the moment you access them through an instance — so the equivalent problem simply doesn't occur — and resolves inheritance through a structurally computed **MRO** rather than a live, mutable chain. In other words, there's no bind/call/apply machinery needed. 
+> **Python** treats methods as descriptors that *auto-bind* `self` the moment you access them through an instance — so the equivalent problem simply doesn't occur — and resolves inheritance through a structurally computed **MRO** rather than a live, mutable chain. In other words, there's no `bind/call/apply` machinery needed. 
 
 **For Web3 work specifically:** you'll encounter both eras of JS syntax in the wild (pre-2015 prototype-based libraries and modern `class`-based SDKs), so recognizing that they're the same mechanism — rather than two unrelated inheritance systems — will save you real confusion when reading contract-interaction code on GitHub.
