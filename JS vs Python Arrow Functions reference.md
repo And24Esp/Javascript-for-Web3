@@ -2,6 +2,8 @@
 
 A side-by-side reference for JS arrow functions and their closest Python equivalent, `lambda`. These are **not** a 1:1 match — arrow functions are a general-purpose function form with `this`-binding implications; `lambda` is a narrow, single-expression convenience. This doc covers where they overlap and where they diverge.
 
+Both are used to create short, anonymous functions (functions without a name) that are typically used for quick operations or as arguments inside other functions like map() and filter(). A common use case for them is mapping and filtering arrays and lists. In JavaScript, arrow functions are a vital architectural tool for managing execution context (this). In Python, lambdas are strictly a minor convenience for writing short, single-expression functions.
+
 ---
 
 ## 1. Basic Syntax
