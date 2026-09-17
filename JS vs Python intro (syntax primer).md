@@ -1,6 +1,6 @@
 # JavaScript vs Python — Syntax Primer (Preface)
 
-A rookie-friendly cheat sheet covering the basic syntax differences between JavaScript and Python. Read this before the **JS vs Python OOP reference**, that document assumes you're already comfortable with everything below.
+A rookie-friendly cheat sheet covering the basic syntax differences between JavaScript and Python. Read this before the **JS vs Python OOP reference**, since that document assumes you're already comfortable with everything below.
 
 ---
 
@@ -120,4 +120,4 @@ list(map(lambda x: x * 2, [1, 2, 3]))   # [2, 4, 6]
 
 ## 10. Where to Go Next
 
-**JS vs Python OOP Reference** — classes, `this` vs `self`, `bind`/`call`/`apply`, callback context loss, the prototype chain, inheritance, and Web3-specific relevance for each.
+**JS vs Python OOP Reference** md file in this same repository — classes, `this` vs `self`, `bind`/`call`/`apply`, callback context loss, the prototype chain, inheritance, and Web3-specific relevance for each.
