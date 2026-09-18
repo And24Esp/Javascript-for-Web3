@@ -11,8 +11,8 @@ Also as a retrospective, I find it way more difficult to learn under an "executi
 
 1. JS Fundamentals:
   Sintaxis/Expressions (data types, operators, variables, functions/statements, conditionals, loops)
-  Basic data storage (strings, arrays, objects/classes)
-  Other basic features/concepts (exceptions, type conversion, transpiling/compiling, prototype chains)
+  Basic data storage (strings, arrays, objects/classes/prototype-chains)
+  Other basic features/concepts (exceptions, type conversion, transpiling/compiling)
   Binary and hexadecimal numbering systems (particulary relevant in Web3)
 
 2. Data Structures:
