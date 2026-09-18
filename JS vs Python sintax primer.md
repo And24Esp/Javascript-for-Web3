@@ -94,6 +94,8 @@ list(map(lambda x: x * 2, [1, 2, 3]))   # [2, 4, 6]
 | Add to a list/array | `arr.push(4)` | `my_list.append(4)` |
 | Length | `arr.length` | `len(my_list)` |
 | String interpolation | `` `Hello ${name}` `` | `f"Hello {name}"` |
+| Stack (LIFO) | No dedicated type — an array is a stack: `arr.push(x)` / `arr.pop()` | No dedicated type — a list is a stack: `my_list.append(x)` / `my_list.pop()` |
+| Linked list | No built-in type — hand-rolled with objects: `` { value, next } `` nodes | No built-in type — hand-rolled with a class: `Node(value, next)`; `collections.deque` is a built-in doubly-linked list if you just need the behavior, not a custom node structure f"Hello {name}" |
 
 ---
 
