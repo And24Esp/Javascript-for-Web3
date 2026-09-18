@@ -20,7 +20,7 @@ Also as a retrospective, I find it way more difficult to learn under an "executi
   Building data structures (recursion, stacks, linked lists)
 
 3. Networks:
-  Local development (Node.js setup, Node package manager)
+  Local development (Node.js runtime environment, Node package manager)
   Asynchronous JS (callback functions, promises)
   Building a server (running a Node server in HTML)
 
