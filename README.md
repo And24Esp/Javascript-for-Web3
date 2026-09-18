@@ -13,7 +13,7 @@ Also as a retrospective, I find it way more difficult to learn under an "executi
   Sintaxis/Expressions (data types, operators, variables, functions/statements, conditionals, loops)
   Basic data storage (strings, arrays, objects/classes)
   Other basic features/concepts (exceptions, type conversion, transpiling/compiling, prototype chains)
-  Binary and hexadecimal data (particulary relevant in cryptography)
+  Binary and hexadecimal numbering systems (particulary relevant in Web3)
 
 2. Data Structures:
   Array manipulation (sort, map, filter, reduce)
