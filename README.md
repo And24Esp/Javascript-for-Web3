@@ -7,7 +7,7 @@ As a reference, I'm using the learning structure detailed on https://www.alchemy
 
 The "curriculum" is divided into 3 main sections, which reflect the division used in the JS course mentioned above. Nevertheless, as I'm going through the course I'm simplifying a lot the details per section, since I'm noticing the JS course needs to go back and forward between concepts in order to compensate the fact that the course is "execution" based instead of "principled" based. The biggest example of this is how the course goes back and forward with the object, class, and "this" keyword concepts (and in my opinion not doing a good job connecting these 3 concepts, which in principle are indivisible from each other).
 
-Also as a retrospective, I find it way more difficult to learn under an "execution" curriculum than a principled based one. It might seem the prior is faster and more hands one (since theory and practice happen in the same screen), but in the long run the qualty of learning is not a match at all, since inevitably you end up resourcing to memory for going through a science you ultimatly don't understand. 
+Also as a general comment, I find it way more difficult to learn under an "in-browser practice" curriculum than a principled based one, where you actually need to setup the environment you'll be working on. It might seem the prior is faster and more hands on (since theory and practice literally occur side to side), but in the long run the qualty of learning is not a match at all, since inevitably you'll end up resourcing to memory to navigate through a science you fundamentally don't understand. 
 
 1. JS Fundamentals:
   Sintaxis/Expressions (data types, operators, variables, functions/statements, conditionals, loops)
@@ -23,4 +23,3 @@ Also as a retrospective, I find it way more difficult to learn under an "executi
   Local development (Node.js runtime environment, Node package manager)
   Asynchronous JS (callback functions, promises)
   Building a server (running a Node server in HTML)
-
