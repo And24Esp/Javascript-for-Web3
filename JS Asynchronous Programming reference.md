@@ -4,7 +4,23 @@ A syntax and concept reference for callbacks, promises, and `async`/`await` in J
 
 ---
 
-## 0. Mental Model First: You Already Know Part of This
+## 0. Why This Isn't Optional: JS *Is* How We Talk to the Internet
+
+Before any mental models or syntax — a bit of "why does this whole topic even exist" context, for anyone reading this without a programming background to lean on.
+
+JavaScript was built to run inside web browsers, which means its entire job, from the very first moment a page loads, is to deal with things that are slow and unpredictable: fetching data over a network, waiting for images to load, waiting for *you* to click something. None of these happen on a fixed schedule the program can predict in advance.
+
+Here's the constraint that makes this unavoidable: **JavaScript runs on a single thread.** In plain terms, that means it can only do one thing at a time — there's no built-in way for it to work on two things simultaneously the way some other languages can. If JS handled a slow network request by simply *waiting* — freezing everything until the data arrived — the entire webpage would lock up: no scrolling, no clicking, no typing, nothing, until that one request finished. Every website you've ever used would be unusable.
+
+So instead, JavaScript was designed around a different rule from day one: **never wait, hand it off.** When something slow needs to happen, JS starts it, immediately moves on to other work, and only comes back to your code once the slow thing finishes — via a callback. This isn't an advanced technique bolted on later; it's the basic survival strategy that makes an interactive, responsive webpage possible at all. Every click handler, every image load, every network request works this way, whether you're aware of it or not.
+
+**Promises and `async`/`await` are not two separate topics — they are the same thing, written two different ways.** This is worth stating plainly before going further: `async`/`await` doesn't replace Promises or work differently under the hood — it's simply a cleaner *writing style* for the exact same Promise machinery. Every `async` function *is* returning a Promise, and every `await` is just a nicer-looking way of writing `.then()`. If a beginner remembers only one thing from this whole document, it should be that: learning "Promises" and learning "`async`/`await`" is really learning one concept, presented twice.
+
+With that foundation, here's how this document is organized: callbacks (§2) are the raw, original mechanism; Promises (§3) are a cleaner container built to organize callbacks; `async`/`await` (§4) is the readable syntax layered on top of Promises. Each section builds on the one before it.
+
+---
+
+## 1. Mental Model: You Already Know Part of This
 
 You've actually seen the shape of this problem twice already, just without the vocabulary:
 
@@ -19,7 +35,7 @@ The mechanism that makes this possible is JavaScript's **event loop**: JS is sin
 
 ---
 
-## 1. Callback Functions — The Original Pattern
+## 2. Callback Functions — The Original Pattern
 
 A callback is just a function passed as an argument, to be invoked later.
 
@@ -59,7 +75,7 @@ This exact pain point is *why* Promises were introduced.
 
 ---
 
-## 2. Promises — A Container for "A Value That Isn't Ready Yet"
+## 3. Promises — A Container for "A Value That Isn't Ready Yet"
 
 A `Promise` represents a value that will exist *eventually* — either successfully (**resolved**) or unsuccessfully (**rejected**). It's always in one of three states:
 
@@ -114,7 +130,7 @@ getUser(userId)
 
 ---
 
-## 3. `async` / `await` — Promises, But Readable
+## 4. `async` / `await` — Promises, But Readable
 
 `async`/`await` is syntax sugar over Promises — it lets asynchronous code *read* like ordinary synchronous, top-to-bottom code, while still being non-blocking under the hood.
 
@@ -145,7 +161,7 @@ async function loadUserHistory(userId) {
 
 ---
 
-## 4. Running Multiple Promises Together
+## 5. Running Multiple Promises Together
 
 | Method | Behavior | Use case |
 |---|---|---|
@@ -173,7 +189,7 @@ const results = await Promise.allSettled([
 
 ---
 
-## 5. Where Async Actually Shows Up
+## 6. Where Async Actually Shows Up
 
 | Scenario | Why it's async |
 |---|---|
@@ -186,7 +202,7 @@ const results = await Promise.allSettled([
 
 ---
 
-## 6. Web3-Specific Relevance
+## 7. Web3-Specific Relevance
 
 This is where async stops being optional — nearly every meaningful Web3 operation is asynchronous, because it involves waiting on a network of nodes rather than a local, instant computation.
 
@@ -220,7 +236,7 @@ async function sendAndTrack() {
 
 ---
 
-## 7. Useful Libraries & Utilities
+## 8. Useful Libraries & Utilities
 
 | Library / API | What it's for |
 |---|---|
@@ -235,7 +251,7 @@ async function sendAndTrack() {
 
 ---
 
-## 8. Quick Cheat Sheet
+## 9. Quick Cheat Sheet
 
 | Concept | Syntax |
 |---|---|
