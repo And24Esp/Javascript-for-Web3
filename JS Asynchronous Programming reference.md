@@ -27,7 +27,7 @@ With that foundation, here's how this document is organized: callbacks (§2) are
 
 You've actually seen the shape of this problem twice already, just without the vocabulary:
 
-- **Pygame's game loop (event handling):** `while running: for event in pygame.event.get(): ...` — your code doesn't know *when* the user will click or press a key. It just registers "if this happens, do that" and lets the loop poll for it, frame by frame.
+- **Pygame's loop (event handling):** `while running: for event in pygame.event.get(): ...` — your code doesn't know *when* the user will click or press a key. It just registers "if this happens, do that" and lets the loop poll for it, frame by frame.
 - **Browser `addEventListener`:** `button.addEventListener("click", handleClick)` — same idea. You hand the browser a function and say "call this *later*, whenever a click happens." You don't control when — the browser's own loop does.
 
 JavaScript's async model (callbacks → promises → `async`/`await`) is the **same underlying idea — "run this later, when something is ready"** — generalized beyond just user-input events to cover *anything* that takes unpredictable time: network requests, file reads, timers, and — critically for Web3 — waiting for a blockchain to mine a transaction.
