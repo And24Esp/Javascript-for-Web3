@@ -142,3 +142,47 @@ console.log("3. Main script: Ends (Main thread is now free!)");
 ### The Big Benefit: Avoiding "Callback Hell"
 Before `async/await`, you had to chain multiple `.then()` blocks together, making code difficult to read. `async/await` lets you write asynchronous code that *looks* synchronous and sequential, but behaves asynchronously under the hood without blocking anything.
 
+---
+
+anything.
+
+---
+
+## Deep Dive: Answering the Follow-Up Questions
+
+### 1. How to use `Promise.all()` with `async/await` for parallel operations
+If you `await` multiple asynchronous calls one after the other, you create an accidental bottleneck because each request waits for the previous one to finish. To trigger operations concurrently, you use `Promise.all()`.
+
+* **The Mechanism:** Instead of pausing on individual lines, you kick off all the asynchronous actions immediately in the background threads. Then, you `await` the combined group.
+
+```javascript
+async function fetchAllData() {
+  // Both network requests start immediately and run in parallel
+  const userPromise = fetch("https://example.com");
+  const postPromise = fetch("https://example.com");
+
+  // Pause once until BOTH background operations finish
+  const [userResponse, postResponse] = await Promise.all([userPromise, postPromise]);
+  
+  console.log("Both background responses received simultaneously!");
+}
+```
+
+### 2. How error handling works with `try/catch` blocks inside async functions
+With plain Promises, you catch rejections using a appended `.catch()` method. With `async/await`, you write error handling exactly like standard synchronous logic using `try/catch`.
+
+* **The Advantage:** If a network request fails or an explicit promise rejects, the execution breaks out of the `try` block and jumps straight into the `catch` block, keeping error trapping centralized and cleaner.
+
+```javascript
+async function safelyFetchData() {
+  try {
+    // If this network request throws a 404 or fails, control jumps to catch
+    const response = await fetch("https://invalid-url.com");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    // Handles network errors, JSON parsing errors, or thread crashes safely
+    console.error("An error occurred during execution: ", error.message);
+  }
+}
+```
