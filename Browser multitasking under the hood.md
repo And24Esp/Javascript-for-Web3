@@ -144,10 +144,6 @@ Before `async/await`, you had to chain multiple `.then()` blocks together, makin
 
 ---
 
-anything.
-
----
-
 ## Deep Dive: Answering the Follow-Up Questions
 
 ### 1. How to use `Promise.all()` with `async/await` for parallel operations
