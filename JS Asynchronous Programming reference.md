@@ -23,7 +23,7 @@ With that foundation, here's how this document is organized: callbacks (§2) are
 
 ---
 
-## 1. Mental Model: You Already Know Part of This
+## 1. Mental Model based on And24Esp/my background: "You Already Know Part of This"
 
 You've actually seen the shape of this problem twice already, just without the vocabulary:
 
