@@ -2,7 +2,7 @@
 
 A syntax and concept reference for callbacks, promises, and `async`/`await` in JavaScript — written for someone coming from Python's synchronous world (plus some Pygame-style event handling and browser `addEventListener` experience), heading into Web3 development where async code is unavoidable.
 
-The mental model behind async JavaScript - the call stack, the task queue, the microtask queue, and how the event loop ties them together:
+Here's an external reference for the mental model behind async JavaScript - the call stack, the task queue, the microtask queue, and how the event loop ties them together:
 https://coddy.tech/docs/javascript/event-loop
 
 ---
