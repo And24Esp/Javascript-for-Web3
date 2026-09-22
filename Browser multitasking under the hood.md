@@ -83,3 +83,62 @@ onmessage = function(event) {
     postMessage(result);
 };
 ```
+
+# How `async/await` Factors into the Architecture?
+
+To understand how `async/await` fits into the JavaScript runtime, it helps to realize one fundamental truth: **`async/await` is just a cleaner way to write Promises.** It does not make JavaScript multi-threaded, nor does it block the main thread while waiting for a task to finish. 
+
+Instead, it acts as a clever pause button for your functions, working hand-in-hand with the **Microtask Queue** and the **Event Loop** [MDN Web Docs](https://mozilla.org).
+
+---
+
+### 1. The `async` Keyword: Automatic Promises
+When you mark a function with `async`, you tell the JavaScript engine two things:
+* This function will always return a **Promise** (even if you return a simple value like a string or number, JS wraps it in a Promise automatically).
+* This function is allowed to use the `await` keyword inside it.
+
+### 2. The `await` Keyword: Yielding Control
+When the JavaScript engine hits an `await` line, execution of *that specific function* pauses. However, **the main thread does not freeze.** 
+
+Instead, the following happens under the hood:
+1. **The Hand-off:** The async operation (like a network `fetch()`) is handed off to the browser's Web API background threads [MDN Web Docs](https://mozilla.org).
+2. **The Exit:** The engine immediately exits the `async` function and goes back to executing the rest of your main script. The UI stays fluid and responsive.
+3. **The VIP Return:** Once the background thread finishes the task, the remaining code *below* the `await` line is packaged up and thrown into the high-priority **Microtask Queue** [MDN Web Docs](https://mozilla.org).
+4. **Resuming:** The Event Loop picks up that callback and resumes your function right where it left off [MDN Web Docs](https://mozilla.org).
+
+---
+
+### Visualizing Code Execution Order
+
+Look at this example to see how `async/await` yields control back to the main thread:
+
+```javascript
+async function fetchUserData() {
+  console.log("2. Inside async function: Before await");
+
+  // The engine pauses *this* function here and tells the browser network thread to handle the fetch.
+  // The engine immediately jumps OUT of this function to run the rest of the main script.
+  await fetch("https://github.com"); 
+
+  // Everything below this line is treated as a VIP Microtask.
+  console.log("4. Inside async function: After await (Microtask Queue)");
+}
+
+console.log("1. Main script: Starts");
+fetchUserData();
+console.log("3. Main script: Ends (Main thread is now free!)");
+```
+
+#### The Output Order
+```text
+1. Main script: Starts
+2. Inside async function: Before await
+3. Main script: Ends (Main thread is now free!)
+4. Inside async function: After await (Microtask Queue)
+```
+
+---
+
+### The Big Benefit: Avoiding "Callback Hell"
+Before `async/await`, you had to chain multiple `.then()` blocks together, making code difficult to read. `async/await` lets you write asynchronous code that *looks* synchronous and sequential, but behaves asynchronously under the hood without blocking anything.
+
