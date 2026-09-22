@@ -84,7 +84,7 @@ onmessage = function(event) {
 };
 ```
 
-## How `async/await` Factors into the Architecture?
+## How `async/await` factors into the Architecture?
 
 To understand how `async/await` fits into the JavaScript runtime, it helps to realize one fundamental truth: **`async/await` is just a cleaner way to write Promises.** It does not make JavaScript multi-threaded, nor does it block the main thread while waiting for a task to finish. 
 
